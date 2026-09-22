@@ -149,8 +149,8 @@ textarea {
 
 .icon-link {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -198,7 +198,7 @@ textarea {
     z-index: 1;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 32px 0 22px;
+    padding: 50px 0 22px;
     background-color: $accent;
   }
 
@@ -586,9 +586,22 @@ textarea {
       background: $white;
     }
 
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover {
+      box-shadow: 0 0 0 1000px $surface inset;
+      -webkit-text-fill-color: $text;
+      caret-color: $text;
+    }
+
+    &:-webkit-autofill:focus {
+      box-shadow: 0 0 0 1000px $white inset;
+      -webkit-text-fill-color: $text;
+      caret-color: $text;
+    }
+
     &--message {
       min-height: 144px;
-      resize: vertical;
+      resize: none;
     }
   }
 }
@@ -788,9 +801,12 @@ textarea {
     &__gallery {
       gap: 8px;
 
-      &--two,
-      &--reverse {
+      &--two {
         grid-template-columns: 2fr 1fr;
+      }
+
+      &--reverse {
+        grid-template-columns: 1fr 2fr;
       }
 
       &--three {
