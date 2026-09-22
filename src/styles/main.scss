@@ -46,7 +46,7 @@ textarea {
 .page {
   background: $text;
   color: $text;
-  font-family: 'Cinzel', Georgia, serif;
+  font-family: Cinzel, Georgia, serif;
 
   &:has(.page__menu:target) {
     overflow: hidden; /* not to scroll the page */
@@ -88,7 +88,9 @@ textarea {
 
 .header {
   min-height: 100vh;
-  background: linear-gradient(rgb(0 0 0 / 8%), rgb(0 0 0 / 8%)), url('../images/hero.png') center / cover no-repeat;
+  background:
+    linear-gradient(rgb(0 0 0 / 8%), rgb(0 0 0 / 8%)),
+    url('../images/hero.png') center / cover no-repeat;
   color: $white;
 
   &__content {
@@ -141,7 +143,7 @@ textarea {
     text-transform: uppercase;
     font-size: clamp(52px, 6.25vw, 80px);
     line-height: 1;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.03em;
   }
 }
 
@@ -152,7 +154,9 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  transition: transform $duration ease, background-image $duration ease;
+  transition:
+    transform $duration ease,
+    background-image $duration ease;
 
   &:hover,
   &:focus-visible {
@@ -449,7 +453,9 @@ textarea {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
-  transition: background-color $duration ease, transform $duration ease;
+  transition:
+    background-color $duration ease,
+    transform $duration ease;
 
   &:hover,
   &:focus-visible {
@@ -563,7 +569,9 @@ textarea {
     outline: none;
     background: $surface;
     font-family: Arial, sans-serif;
-    transition: border-color $duration ease, background-color $duration ease;
+    transition:
+      border-color $duration ease,
+      background-color $duration ease;
 
     &::placeholder {
       color: #7e7e83;
@@ -603,11 +611,6 @@ textarea {
       opacity: 1;
     }
   }
-}
-
-[data-reveal] {
-  opacity: 1;
-  transform: none;
 }
 
 @media (max-width: 800px) {
@@ -855,10 +858,5 @@ textarea {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
-  }
-
-  [data-reveal] {
-    opacity: 1;
-    transform: none;
   }
 }
